@@ -1,4 +1,4 @@
-# Simple COVID-19 Exponential Growth Simulator Template -- Ryan K. - 04/07/2020, 12:26PM Version 0.2
+# Simple COVID-19 Exponential Growth Simulator Template -- Ryan K. - 04/07/2020, 1:04PM Version 1.0
 
 import time
 
@@ -12,19 +12,20 @@ print("Currently, the number of infections of COVID-19 will double every six day
 
 time.sleep(3)
 
-# Use an input() statement to have the user enter the CURRENT NUMBER OF INFECTED CASES.  Make sure it's an INT.
-# Use an input() statement to have the user enter the NUMBER OF DAYS TO SIMULATE.  Make sure it's an INT.
+num_infected = int(input("Please enter the current number of infections as an integer.  Do not use commas or spaces.  Type the number and press enter."))
+num_simulate = int(input("How many days do you want to simulate?  Do not use commas or spaces.  Type the number and press enter.")) 
 
-# Use a print() statement to display the current number of infected people and how many days to simulate.
 
-# Remove the comment on the next line and change the two variables to reflect the variable names you used. 
-# while VARIABLE FOR DAY NUMBER <= NUMBER OF DAYS TO SIMULATE:
+print(f"There are currently {num_infected:,} people in the U.S. and you will simulate for {num_simulate} days.")
+
+while num_days <= num_simulate:
     
-    # Write an assignment statement (use =) to double the number of infected people. 
-    # Write an assignment statement (use =) to multiply the number of infected people by the mortality rate to find the number of deaths.
-    # Write a print() statement that displays the number of infected people and the number of deaths. 
-    # Increment the current day number by 6, since the number of infections doubles every six days approximately.  
-    # Use time.sleep() to pause for a few seconds to allow the user to read the instructions.  
+    num_infected += num_infected
+    num_deaths = round(num_infected * 0.023)
+    print(f"On day {num_days} there are {num_infected:,} infected people.")
+    print(f"Approximately {num_deaths:,} will die from COVID-19.") 
+    num_days += 6  
+    time.sleep(3)   
 
 # Write a print() statement that shows the total number of infections and the number of deaths after running your simulation.  
 

@@ -1,4 +1,4 @@
-# Simple COVID-19 Exponential Growth Simulator Template -- Ryan K.  -- 04/13/20 -- 10:28am -- Version 0.1
+# Simple COVID-19 Exponential Growth Simulator Template -- Ryan K.  -- 04/13/20 -- 10:34am -- Version 0.2
 
 import time
 
@@ -7,9 +7,8 @@ current_day = 0
 days_sim = 0 
 num_deaths_ppl = 0 
 
-# Use a print() statement to explain that the number of infections doubles every six days.
-
-# Use time.sleep() to pause a few seconds so the user can read your print() statement.
+print("This program will model potential COVID-19 infections and deaths in the U.S.  Right now, the number of infections will double every six days.\n")
+time.sleep(4)
 
 # Use an input() statement to have the user enter the CURRENT NUMBER OF INFECTED CASES.  Make sure it's an INT.
 # Use an input() statement to have the user enter the NUMBER OF DAYS TO SIMULATE.  Make sure it's an INT.
